@@ -46,6 +46,9 @@ nox -s docs       # build static HTML in docs/_build/html
 nox -s docs-live  # serve locally with live reload
 ```
 
+The published docs are hosted on GitHub Pages (built from `main` by [`docs.yml`](https://github.com/2i2c-org/clinder/blob/main/.github/workflows/docs.yml)).
+The `netlify.toml` config only serves as a demo of per-PR deploy previews (it exists at <https://2i2c-clinder.netlify.app> though the URL of each PR demo is unique).
+
 ### Releases
 
 Releasing the CLI
