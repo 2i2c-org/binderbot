@@ -1,7 +1,8 @@
 # Build the docs site on Netlify.
-# mystmd (from docs/requirements.txt) brings its own Node via nodeenv,
-# so only Python is needed in the build image.
+# Runs from the repo root so `nox` can find noxfile.py; the `docs` session
+# changes into docs/ and builds with mystmd (which brings its own Node).
 [build]
-  base = "docs"
-  publish = "_build/html"
+  publish = "docs/_build/html"
   command = "pip install nox && nox -s docs"
+  # Only build pull request deploy previews and skip builds on `main`
+  ignore = "[ \"$CONTEXT\" != \"deploy-preview\" ]"
