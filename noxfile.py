@@ -1,5 +1,4 @@
 import json
-import os
 
 import nox
 
@@ -14,14 +13,10 @@ def docs(session):
 @nox.session(name="docs-binder")
 def docs_binder(session):
     """Build the docs with notebooks executed on Binder (used by Netlify previews)."""
-    repo = os.environ["REPOSITORY_URL"].removeprefix("https://github.com/")
-    ref = os.environ["HEAD"]
-
     # Start a Binder session, clinder prints {url, token} as JSON on the last line.
-    # use @latest to force netlify to use the published pkg, not try to build locally
     out = session.run(
         "npx", "-y", "clinder@latest", "start", "https://mybinder.org",
-        "--github-repo", repo, "--github-ref", ref, "--json",
+        "--github-repo", "binder-examples/requirements", "--github-ref", "HEAD", "--json",
         external=True, silent=True,
     )
     s = json.loads(out.strip().splitlines()[-1])
