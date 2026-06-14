@@ -1,3 +1,8 @@
 node_modules
 dist/
 !packages/clinder-action/dist/
+__pycache__/
+.nox/
+.ipynb_checkpoints
+session.json
+_build

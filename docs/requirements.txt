@@ -1,0 +1,5 @@
+# needed to execute the live-demo page when no Binder session is available (i.e. local builds).
+mystmd
+jupyter-server
+ipykernel
+numpy

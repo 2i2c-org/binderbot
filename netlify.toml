@@ -1,0 +1,7 @@
+# Build the docs site on Netlify.
+# mystmd (from docs/requirements.txt) brings its own Node via nodeenv,
+# so only Python is needed in the build image.
+[build]
+  base = "docs"
+  publish = "_build/html"
+  command = "pip install nox && nox -s docs"

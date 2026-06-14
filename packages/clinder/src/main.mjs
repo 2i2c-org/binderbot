@@ -102,7 +102,7 @@ function main() {
     .requiredOption("--github-repo <repo>", "GitHub repo")
     .option("--github-ref <ref>", "GitHub ref", "HEAD")
     .option("--json", "Output JSON")
-    .option("--build-token", "BinderHub build token")
+    .option("--build-token <token>", "BinderHub build token")
     .action(startSession);
   program
     .command("stop")

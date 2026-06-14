@@ -30,7 +30,7 @@ Options:
   --github-repo <repo>  GitHub repo
   --github-ref <ref>    GitHub ref (default: "HEAD")
   --json                Output JSON
-  --build-token         BinderHub build token
+  --build-token <token>  BinderHub build token
   -h, --help            display help for command
 ```
 
