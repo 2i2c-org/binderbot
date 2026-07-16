@@ -31,7 +31,7 @@ jobs:
       # Start a Binder session with our own action; this exports the
       # JUPYTER_BASE_URL and JUPYTER_TOKEN env vars so the live-demo page
       # in the docs is executed on mybinder.org rather than on this runner.
-      - uses: 2i2c-org/clinder@HEAD
+      - uses: 2i2c-org/binderbot@HEAD
         with:
           hub-url: https://mybinder.org
           repo: binder-examples/requirements

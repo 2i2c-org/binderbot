@@ -1,6 +1,6 @@
 # Use the GitHub Action
 
-The `2i2c-org/clinder` action provisions a BinderHub session and exposes the Jupyter server information to the rest of the job.
+The `2i2c-org/binderbot` action provisions a BinderHub session and exposes the Jupyter server information to the rest of the job.
 The action:
 
 - Creates a Binder session for the repository you configure.
@@ -34,7 +34,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       # Sets the JUPYTER_BASE_URL and JUPYTER_TOKEN env vars
-      - uses: 2i2c-org/clinder@action-v1
+      - uses: 2i2c-org/binderbot@action-v1
         with:
           hub-url: https://mybinder.org/
       - uses: actions/setup-node@v4

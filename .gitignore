@@ -1,6 +1,6 @@
 node_modules
 dist/
-!packages/clinder-action/dist/
+!packages/binderbot-action/dist/
 __pycache__/
 .nox/
 .ipynb_checkpoints

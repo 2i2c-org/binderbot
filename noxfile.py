@@ -13,9 +13,9 @@ def docs(session):
 @nox.session(name="docs-binder")
 def docs_binder(session):
     """Build the docs with notebooks executed on Binder (used by Netlify previews)."""
-    # Start a Binder session, clinder prints {url, token} as JSON on the last line.
+    # Start a Binder session, binderbot prints {url, token} as JSON on the last line.
     out = session.run(
-        "npx", "-y", "clinder@latest", "start", "https://mybinder.org",
+        "npx", "-y", "binderbot@latest", "start", "https://mybinder.org",
         "--github-repo", "binder-examples/requirements", "--github-ref", "HEAD", "--json",
         external=True, silent=True,
     )
@@ -28,7 +28,7 @@ def docs_binder(session):
                     env={"JUPYTER_BASE_URL": s["url"], "JUPYTER_TOKEN": s["token"]})
         
     # Stop the Binder session.
-    session.run("npx", "-y", "clinder@latest", "stop", s["url"], s["token"], external=True)
+    session.run("npx", "-y", "binderbot@latest", "stop", s["url"], s["token"], external=True)
 
 
 @nox.session(name="docs-live")

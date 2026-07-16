@@ -91,7 +91,7 @@ function main() {
   const program = new Command();
 
   program
-    .name("clinder")
+    .name("binderbot")
     .description("A simple CLI tool to load a BinderHub session")
     .version("0.0.0");
 

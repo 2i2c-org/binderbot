@@ -1,6 +1,6 @@
 # Developer guide
 
-This covers the technical design and some common tasks for `clinder`.
+This covers the technical design and some common tasks for `binderbot`.
 For broader contributing documentation, see [Contributing](./contributing.md).
 
 ## Developer documentation
@@ -9,10 +9,10 @@ For broader contributing documentation, see [Contributing](./contributing.md).
 
 The repository is an npm monorepo with three packages:
 
-`packages/clinder`
-: The `clinder` CLI, published to npm.
+`packages/binderbot`
+: The `binderbot` CLI, published to npm.
 
-`packages/clinder-action`
+`packages/binderbot-action`
 : The GitHub Action that spins up and tears down a BinderHub session.
 
 `binderhub-client-next`
@@ -31,8 +31,8 @@ Our plan is to upstream this change into BinderHub, see https://github.com/jupyt
 ### Development setup
 
 ```bash
-git clone --recurse-submodules https://github.com/2i2c-org/clinder
-cd clinder
+git clone --recurse-submodules https://github.com/2i2c-org/binderbot
+cd binderbot
 npm ci
 npm run build --workspaces
 ```
@@ -46,22 +46,22 @@ nox -s docs       # build static HTML in docs/_build/html
 nox -s docs-live  # serve locally with live reload
 ```
 
-The published docs are hosted on GitHub Pages (built from `main` by [`docs.yml`](https://github.com/2i2c-org/clinder/blob/main/.github/workflows/docs.yml)).
-The `netlify.toml` config only serves as a demo of per-PR deploy previews (it exists at <https://2i2c-clinder.netlify.app> though the URL of each PR demo is unique).
+The published docs are hosted on GitHub Pages (built from `main` by [`docs.yml`](https://github.com/2i2c-org/binderbot/blob/main/.github/workflows/docs.yml)).
+The `netlify.toml` config only serves as a demo of per-PR deploy previews (it exists at <https://2i2c-binderbot.netlify.app> though the URL of each PR demo is unique).
 
 ### Releases
 
 Releasing the CLI
-: Merge the new version in `packages/clinder/package.json` to `main`, then create a GitHub release with tag `cli-vX.X.X`. CI publishes to npm.
+: Merge the new version in `packages/binderbot/package.json` to `main`, then create a GitHub release with tag `cli-vX.X.X`. CI publishes to npm.
 
 Releasing the action
-: Merge a branch containing the built action (`npm run build -w packages/clinder-action`) to `main`, then create a GitHub release with tag `action-vX`.
+: Merge a branch containing the built action (`npm run build -w packages/binderbot-action`) to `main`, then create a GitHub release with tag `action-vX`.
 
 ### Testing
 
 The packages don't yet have unit tests, because the intention is to rely on the upstream `@jupyterhub/binderhub-client` package once it supports Node.js.
 
-The action is tested in CI on every push: [`test.yml`](https://github.com/2i2c-org/clinder/blob/main/.github/workflows/test.yml) launches `binder-examples/requirements` on mybinder.org with the action, then builds the small MyST project in [`test/`](https://github.com/2i2c-org/clinder/tree/main/test) with `myst build --site --strict --execute`.
+The action is tested in CI on every push: [`test.yml`](https://github.com/2i2c-org/binderbot/blob/main/.github/workflows/test.yml) launches `binder-examples/requirements` on mybinder.org with the action, then builds the small MyST project in [`test/`](https://github.com/2i2c-org/binderbot/tree/main/test) with `myst build --site --strict --execute`.
 The test page contains a single code cell:
 
 ```python
@@ -71,4 +71,4 @@ assert "CI" not in os.environ
 ```
 
 GitHub Actions runners always set `CI=true`, so the build passes only if the code ran on the Binder pod rather than on the runner.
-Watch real runs at [Test Build on BinderHub](https://github.com/2i2c-org/clinder/actions/workflows/test.yml).
+Watch real runs at [Test Build on BinderHub](https://github.com/2i2c-org/binderbot/actions/workflows/test.yml).

@@ -1,8 +1,8 @@
-# Clinder — CLI
+# BinderBot — CLI
 ## Overview
 
 ```
-Usage: clinder [options] [command]
+Usage: binderbot [options] [command]
 
 A simple CLI tool to load a BinderHub session
 
@@ -19,7 +19,7 @@ Commands:
 ## Start
 
 ```
-Usage: clinder start [options] <binderhub <url>>
+Usage: binderbot start [options] <binderhub <url>>
 
 Start a BinderHub session
 
@@ -37,7 +37,7 @@ Options:
 ## Stop
 
 ```
-Usage: clinder stop [options] <url <url>> <token <token>>
+Usage: binderbot stop [options] <url <url>> <token <token>>
 
 Stop a BinderHub session
 

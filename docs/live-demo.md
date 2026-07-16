@@ -18,10 +18,10 @@ print(f"This code ran on: {platform.node()}")
 
 A hostname starting with `jupyter-binder-` means the code ran on a [mybinder.org](https://mybinder.org) pod.
 
-This documentation is built with the following `clinder` GitHub action configuration, which specifies the repository to use on Binder:
+This documentation is built with the following `binderbot` GitHub action configuration, which specifies the repository to use on Binder:
 
 ```{literalinclude} ../.github/workflows/docs.yml
-:start-at: 2i2c-org/clinder@HEAD
+:start-at: 2i2c-org/binderbot@HEAD
 :end-before: name: Build docs
 ```
 

@@ -27,5 +27,5 @@ outputs:
 
 runs:
   using: node20
-  main: packages/clinder-action/dist/main.cjs
-  post: packages/clinder-action/dist/post.cjs
+  main: packages/binderbot-action/dist/main.cjs
+  post: packages/binderbot-action/dist/post.cjs

@@ -1,1 +1,1 @@
-See <docs/CONTRIBUTING.md>, or the [contirbuting guide on the web](https://2i2c.org/clinder/contributing).
+See <docs/CONTRIBUTING.md>, or the [contirbuting guide on the web](https://2i2c.org/binderbot/contributing).

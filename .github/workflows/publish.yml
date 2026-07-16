@@ -23,5 +23,5 @@ jobs:
       - name: Update npm
         run: npm install -g npm@latest
       - run: npm ci
-      - run: npm run build --workspace packages/clinder
-      - run: npm publish --provenance --access public --workspace packages/clinder
+      - run: npm run build --workspace packages/binderbot
+      - run: npm publish --provenance --access public --workspace packages/binderbot

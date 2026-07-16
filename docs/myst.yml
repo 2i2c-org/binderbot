@@ -1,9 +1,9 @@
 # See docs at: https://mystmd.org/guide/frontmatter
 version: 1
 project:
-  title: Clinder
+  title: BinderBot
   description: A CLI and GitHub Action for starting and stopping BinderHub sessions.
-  github: https://github.com/2i2c-org/clinder
+  github: https://github.com/2i2c-org/binderbot
   license: BSD-3-Clause
   toc:
     - file: index.md
@@ -19,5 +19,5 @@ site:
   template: book-theme
   options:
     logo: binder-logo-square.png
-    logo_text: Clinder
+    logo_text: BinderBot
     favicon: binder-logo-square.png
