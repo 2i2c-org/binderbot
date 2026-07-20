@@ -1,8 +1,5 @@
 {
   "name": "binderbot-workspace",
-  "private": true,
-  "workspaces": [
-    "packages/*"
-  ]
+  "private": true
 }
 
