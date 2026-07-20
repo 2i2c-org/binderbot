@@ -23,7 +23,6 @@ jobs:
       - uses: pnpm/action-setup@v6
       - run: pnpm ci
       - run: pnpm run build
-        working-dir: packages/binderbot
+        working-directory: packages/binderbot
       - run: pnpm publish --provenance --access public
-        working-dir: packages/binderbot
-
+        working-directory: packages/binderbot
