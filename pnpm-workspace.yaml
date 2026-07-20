@@ -4,3 +4,5 @@ packages:
   - 'binderhub/js/packages/*'
 allowBuilds:
   esbuild: true
+# 43200 minutes = 30 days
+minimumReleaseAge: 43200

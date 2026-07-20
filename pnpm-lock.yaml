@@ -66,7 +66,7 @@ importers:
         specifier: ^1.11.1
         version: 1.11.1
       '@jupyterhub/binderhub-client':
-        specifier: ../../binderhub/js/packages/binderhub-client/
+        specifier: workspace:binderhub-client
         version: link:../../binderhub/js/packages/binderhub-client
     devDependencies:
       esbuild:
