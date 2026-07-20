@@ -1,5 +1,6 @@
 {
   "name": "binderbot-workspace",
-  "private": true
+  "private": true,
+  "packageManager": "pnpm@11.15.0"
 }
 
