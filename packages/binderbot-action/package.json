@@ -8,6 +8,7 @@
     "@actions/core": "^1.11.1",
     "@jupyterhub/binderhub-client": "../../binderhub/js/packages/binderhub-client/"
   },
+  "packageManager": "pnpm@11.15.0",
   "scripts": {
     "build": "node ./esbuild.mjs"
   },
