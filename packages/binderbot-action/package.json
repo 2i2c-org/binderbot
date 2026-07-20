@@ -6,7 +6,7 @@
   "main": "main.mjs",
   "dependencies": {
     "@actions/core": "^1.11.1",
-    "@jupyterhub/binderhub-client": "../../binderhub/js/packages/binderhub-client/"
+    "@jupyterhub/binderhub-client": "workspace:binderhub-client"
   },
   "packageManager": "pnpm@11.15.0",
   "scripts": {

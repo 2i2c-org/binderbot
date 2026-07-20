@@ -1,5 +1,6 @@
 # pnpm-workspace.yaml
 packages:
   - 'packages/*'
+  - 'binderhub/js/packages/*'
 allowBuilds:
   esbuild: true
