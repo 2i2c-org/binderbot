@@ -20,8 +20,10 @@ jobs:
         with:
           node-version: "22.x"
           registry-url: "https://registry.npmjs.org"
-      - name: Update npm
-        run: npm install -g npm@latest
-      - run: npm ci
-      - run: npm run build --workspace packages/binderbot
-      - run: npm publish --provenance --access public --workspace packages/binderbot
+      - uses: pnpm/action-setup@v6
+      - run: pnpm ci
+      - run: pnpm run build
+        working-dir: packages/binderbot
+      - run: pnpm publish --provenance --access public
+        working-dir: packages/binderbot
+
