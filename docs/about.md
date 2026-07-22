@@ -13,4 +13,4 @@ BinderBot re-implements much of the same functionality to be more modular and st
 
 ## Acknowledgements
 
-Most of BinderBot's development has been funded by [Project Pythia](https://projectpythia.org), supported by the U.S. National Science Foundation through EarthCube award [#2026863](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2026863).
+Most of BinderBot's development has been funded by [Project Pythia](https://projectpythia.org), supported by the U.S. National Science Foundation through the [GeoOSE award](https://doi.org/10.5281/zenodo.8184297), and earlier through EarthCube award [#2026863](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2026863).
